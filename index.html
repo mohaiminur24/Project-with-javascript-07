@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Javascrpt</title>
+</head>
+<body onload="catagoryLoad(),catagoryID()">
+
+    <div id="websiteProgress" class="">
+        <div class="flex items-center justify-center h-screen">
+            <div
+              class=" inline-block h-24 w-24 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
+              role="status">
+              <span
+                class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+                >Loading...</span
+              >
+            </div>
+          </div>
+    </div>
+
+<section class="w-11/12 mx-auto my-5 hidden" id="websiteBody"> 
+
+    <div class="flex justify-between items-center py-3 border-b">
+        <h1 class="px-8 py-2 bg-blue-500 rounded-md text-white font-semibold">News</h1>
+        <img class="w-10 rounded-full border" src="https://media.licdn.com/dms/image/C4E03AQFeRUUDnPNpmg/profile-displayphoto-shrink_800_800/0/1610990051838?e=1683158400&v=beta&t=0Gn6ZNZsR70yXv054MA2jwqPP3rp7GXJjxqws6ivJHg" alt="">
+    </div>
+
+    <div class="w-full flex justify-around gap-5 flex-wrap font-bold my-5 text-gray-500" id="allCatagory">
+    </div>
+    <h1 class="w-full bg-gray-100 px-10 py-5 border rounded-md text-gray-400"><span id="catagoryLenght">N/A</span> Items in your Catagory <span id="catagoryname"></span></h1>
+
+    <div class="my-10 flex justify-between items-center flex-wrap">
+        <div class="my-2">
+            <label class="font-semibold mr-3" for="">Sort By View</label>
+            <select class="opacity-50 px-5 py-2 bg-gray-100 border rounded-md outline-none" name="sorting">
+                <option>Default</option>
+                <option value="views">By Views</option>
+                <option value="rating">By Rating</option>
+            </select>
+        </div>
+
+        <div class="mr-5 my-2">
+            <button onclick="todaysPick()" class="px-5 bg-blue-500 py-2 rounded-md text-white border">Today's Pick</button>
+            <button onclick="trending()" class="px-5 py-2 rounded-md text-blue-500 border-blue-500 border">Trending</button>
+
+        </div>
+    </div>
+
+    <!-- Post Box -->
+    <h1 id="notdataFound" class="text-2xl w-full text-center font-bold text-red-500  my-36">No Data Found !!!</h1>
+    <div class="w-full" id="postParent">    
+    </div>
+
+
+
+
+<!-- Put this part before </body> tag -->
+<input type="checkbox" id="my-modal-3" class="modal-toggle" />
+<div class="modal">
+  <div class="modal-box relative" id="modalParent">
+    
+        
+  </div>
+</div>
+
+
+
+
+
+    
+
+
+
+
+<footer class="w-full text-center my-10 bg-slate-500 rounded-md py-10 text-white">
+    <h1>MohaiMinur rahman Mukta</h1>
+</footer>
+
+</section> 
+    <script src="javascript.js"></script>    
+</body>  
+</html>
